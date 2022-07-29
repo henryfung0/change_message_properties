@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class cmd_action {
-
     public static void close_excel(String filename) {
         try {
             String cmd = "taskkill /fi \"WindowTitle eq Microsoft Excel - " + filename + "\"";
@@ -25,8 +24,8 @@ public class cmd_action {
         }
     }
 
-    public static void turtoise_check_for_modification(String turtoise_filepath , String project_filepath){
-        if(excel_setting.turtoise_checkformodification_function) {
+    public static void turtoise_check_for_modification(String turtoise_filepath, String project_filepath) {
+        if (excel_setting.turtoise_checkformodification_function) {
             if (excel_overwrite_properties.modified) {
                 try {
                     turtoise_filepath = filepath_add_quotation(turtoise_filepath);
@@ -40,7 +39,7 @@ public class cmd_action {
         }
     }
 
-    private static String filepath_add_quotation(String filepath){
-        return "\""+filepath+"\"";
+    private static String filepath_add_quotation(String filepath) {
+        return "\"" + filepath + "\"";
     }
 }

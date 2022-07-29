@@ -16,4 +16,8 @@ public class excel_setting {
 
     public static short color1= IndexedColors.LIGHT_TURQUOISE1.index;
     public static short color2=IndexedColors.CORNFLOWER_BLUE.index;
+
+    public static int layout_message_width=7750;
+
+    public static int layout_variable_width=4000;
 }

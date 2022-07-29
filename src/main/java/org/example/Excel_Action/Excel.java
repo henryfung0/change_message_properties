@@ -88,7 +88,7 @@ public class Excel {
         boolean normal = false;
         while (!normal) {
             try {
-                normal=true;
+                normal = true;
                 File file = new File(filepath.excel_sheet_name);
                 FileOutputStream out = new FileOutputStream(file);
                 workbook.write(out);
@@ -96,14 +96,11 @@ public class Excel {
                 System.out.println("message_properties.xlsx written successfully on disk.");
                 cmd_action.open_excel(filepath.excel_sheet_name);
             } catch (Exception e) {
-                normal=false;
+                normal = false;
                 cmd_action.close_excel(filepath.excel_sheet_name);
             }
         }
     }
-
-
-
 
     public static String retrieve_cell_value(Cell cell) {
         return switch (cell.getCellType()) {
@@ -112,8 +109,4 @@ public class Excel {
             default -> null;
         };
     }
-
-
-
-
 }

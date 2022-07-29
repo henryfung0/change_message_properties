@@ -14,10 +14,9 @@ import static org.example.setting.filepath.default_work_book;
 
 //import statements
 public class Excel_Action {
-    public static void gen_sheet(String file_name,int counter) {
+    public static void gen_sheet(String file_name, int counter) {
         XSSFWorkbook workbook = default_work_book;
         XSSFSheet sheet = workbook.createSheet(file_name);
-
         int rownum = 1;
         sheet.protectSheet(excel_lock_password);
         for (Message messageArrayList : messageArrayList) {
@@ -48,7 +47,7 @@ public class Excel_Action {
             cell = row.createCell(9);
             org.example.Excel_Action.Excel_layout.cell_allow_edit(cell);
         }
-        edit_layout(workbook, sheet,counter);
+        edit_layout(workbook, sheet, counter);
         //lockAll(sheet);
     }
 
@@ -78,7 +77,6 @@ public class Excel_Action {
             cell.setCellStyle(Excel_layout.WrapText_style);
         }
         if (excel_setting.highlight_function) {
-
             if (getstring == null) {
                 cell.setCellStyle(Excel_layout.emptyfield_style);
             }

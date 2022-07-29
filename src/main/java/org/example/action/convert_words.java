@@ -17,8 +17,6 @@ public class convert_words {
     }
 
     /*------------------------convert chararcter to UTF-8 or UNICODE ------------------------*/
-    public static String testing = "电子成立公司流程";
-
 
     public static String StringToUnicode(String s) {
         try {
@@ -40,9 +38,11 @@ public class convert_words {
             return null;
         }
     }
-    public static String convert_regrex(String regrex){
-        return regrex.replaceAll("\\\\u","\\\\\\\\u");
+
+    public static String convert_regrex(String regrex) {
+        return regrex.replaceAll("\\\\u", "\\\\\\\\u");
     }
+
     public static String unicodeToUtf8(String theString) {
         char aChar;
         int len = theString.length();
