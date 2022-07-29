@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" build-on-make="true" name="change_message_properties:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/change_message_properties_jar</output-path>
+    <output-path>$PROJECT_DIR$/target/artifacts/change_message_properties_jar</output-path>
     <root id="archive" name="change_message_properties.jar">
       <element id="module-output" name="change_message_properties" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar" path-in-jar="/" />
